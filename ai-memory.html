@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Memory Is Organizational Memory — A Field Note</title>
+<meta name="description" content="Why the AI memory problem and the organizational memory problem are the same problem — and what RAG, agents, and long-context models do (and don't) fix about institutional forgetting." />
+<link rel="canonical" href="https://organizationalamnesia.com/ai-memory.html" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AI Memory Is Organizational Memory" />
+<meta property="og:description" content="A long-form argument that the AI memory problem and the organizational memory problem are isomorphic — with implications for what to build and what to expect." />
+<meta property="og:url" content="https://organizationalamnesia.com/ai-memory.html" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Memory Is Organizational Memory",
+  "description": "Why the AI memory problem and the organizational memory problem are the same problem.",
+  "author": { "@type": "Organization", "name": "organizational amnesia" },
+  "publisher": { "@type": "Organization", "name": "Reattend" },
+  "datePublished": "2026-05-04",
+  "url": "https://organizationalamnesia.com/ai-memory.html",
+  "mainEntityOfPage": "https://organizationalamnesia.com/ai-memory.html",
+  "keywords": "AI memory, organizational memory, RAG, retrieval augmented generation, agent memory, institutional memory"
+}
+</script>
+
+<link rel="stylesheet" href="styles/site.css" />
+</head>
+<body data-page="ai-memory">
+
+<header class="topbar"></header>
+
+<section class="page-hero">
+  <div class="ph-inner">
+    <div class="eyebrow">§ Field note · 2026</div>
+    <h1>AI memory <em>is</em> organizational memory.</h1>
+    <p class="lede">The systems we are building to give language models a working past — RAG stacks, vector stores, agent scratchpads, long context — are recognizably the same systems we have been building, in slower form, to give institutions one. They have the same failure modes. They will require the same discipline.</p>
+    <div class="cite hero-meta">~14 min read · Field note 2026.02</div>
+  </div>
+</section>
+
+<section class="section essay">
+  <div class="essay-body body">
+
+    <p class="dropcap">A claim, to begin with: the AI-memory problem is not a new problem. It is the organizational-memory problem, restaged at a faster clock speed and on a substrate that does not get tired. Treat the two as the same problem and the AI work gets easier; treat them as separate and you will rebuild, badly, what the knowledge-management literature has been working on since the 1990s.</p>
+
+    <p>This essay makes that case in three movements. First, what the two problems actually are, and why they are isomorphic. Second, the architectures — RAG, vector stores, knowledge graphs, agent memory, long-context windows — and the older institutional architectures they recapitulate. Third, what is genuinely new — the failure modes that did not exist when memory lived in human heads and corporate wikis.</p>
+
+    <h2>I. Two views of the same animal</h2>
+
+    <p>Begin with the human side. <em>Organizational amnesia</em>, as the project defines it, is the accidental, unintentional evaporation of organizational knowledge — distinct from deliberate purging. The classical taxonomy, from <a href="research.html#bibliography">de Holan &amp; Phillips (2004)</a> and the <em>Journal of Knowledge Management</em> tradition, divides knowledge into four types: conscious (explicit, individual), codified (explicit, social), automatic (implicit, individual), and collective (implicit, embedded). An organization "remembers" when each of these is preserved across time. It "forgets" when any one of them is allowed to leak — through departures, decay, dispersal, defensiveness, or discontinuity.</p>
+
+    <p>Now turn to the AI side. A language model, in the canonical setup, has no persistent memory at all. Its weights encode a training distribution; its context window is a fast-fading, finite scratchpad; everything else is constructed at inference time by retrieving from external systems and pasting the result into the prompt. The architectures the AI community has converged on — retrieval-augmented generation (Lewis et al., 2020), agentic scratchpads, long-running session memories, knowledge graphs, vector indices — are <em>memory prosthetics</em>. They exist to give the model a past it can act on.</p>
+
+    <p>The structural correspondence is exact. The model is the new employee. The retrieval system is the institutional memory the new employee inherits. The vector store is the wiki. The agent scratchpad is the postmortem file. The long context window is the senior engineer who happens to have been in the room for the last meeting. Each architecture choice, on the AI side, has a precise analogue on the institutional side — and both inherit the same failure modes from the same underlying cause: <strong>knowledge that is not retrievable, by the system that needs it, at the moment it needs it, is functionally absent.</strong></p>
+
+    <h2>II. The architecture parallel</h2>
+
+    <p>The clearest way to see the isomorphism is to walk through the AI memory stack and name what it recreates on the institutional side. The list below is not an analogy in the loose sense; it is the same problems, with a different substrate.</p>
+
+    <div class="parallel-table">
+      <div class="prl-row prl-head">
+        <div>AI memory architecture</div>
+        <div>Institutional analogue</div>
+        <div>Shared failure mode</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Retrieval-augmented generation (RAG)</strong> over a vector store</div>
+        <div>Search over a corporate wiki, plus a senior person to interpret what the search returns</div>
+        <div>Index drift: the corpus becomes stale relative to current reality, and the system retrieves authoritatively-shaped wrong answers</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Long context windows</strong> (1M+ tokens)</div>
+        <div>The single long-tenured employee who "remembers everything"</div>
+        <div>Concentrated load. The cost of losing the context (for the model: eviction; for the org: resignation) is catastrophic</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Agent memory / scratchpads</strong></div>
+        <div>Personal notes, Slack DMs, the engineer's home directory of one-off scripts</div>
+        <div>Knowledge that is real but illegible to anyone but its author. Useful while the agent runs; lost on session end</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Knowledge graphs</strong> (GraphRAG, ontology-backed retrieval)</div>
+        <div>Decision-records, formal documentation systems, runbook hierarchies</div>
+        <div>Schema rot: the ontology drifts from the territory it describes; queries return correctly-typed nonsense</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Memory features in consumer assistants</strong> (ChatGPT memory, Claude memory)</div>
+        <div>The assistant who remembers your preferences without being asked twice</div>
+        <div>Stale preference: yesterday's preference cited as today's, when in fact circumstances changed and nobody told the system</div>
+      </div>
+      <div class="prl-row">
+        <div><strong>Fine-tuning / continual learning</strong></div>
+        <div>Onboarding; institutional acculturation; the slow making-of-a-senior-engineer</div>
+        <div>Catastrophic forgetting of older capabilities; expensive to update; impossible to fully audit</div>
+      </div>
+    </div>
+
+    <p>What the table makes legible: every category of AI memory has at least one mature institutional analogue with a literature you can read and field experience you can borrow. The corollary: every category of AI memory has at least one mature failure mode that the institutional version has been failing at for thirty years. RAG stacks rot the way wikis rot. Agents lose context the way junior engineers lose track. Knowledge graphs ossify the way over-specified runbooks ossify. The mechanisms are not new because the substrate is new; the substrate inherits the mechanisms.</p>
+
+    <h2>III. What is genuinely new</h2>
+
+    <p>Three things are different. None of them invalidate the parallel; they sharpen it.</p>
+
+    <p><strong>The first new thing is speed.</strong> An organization forgets on a multi-year cycle — PMI's classical work finds a generational, ~20-year periodicity in century-old institutions; <a href="research.html#papers">recent project work (WP-25-02)</a> compresses that to roughly 6 years in software-era firms. An AI system, with no continuity by default, forgets on a per-session cycle. The institutional decay function and the AI decay function differ in time constant by six orders of magnitude. This means the standard institutional remedies — quarterly reviews, lessons-learned audits, postmortem re-reads — are not unit-compatible with AI memory. The cadence of the discipline has to compress to match the cadence of the substrate.</p>
+
+    <p><strong>The second new thing is hallucinated continuity.</strong> An institutional system that has forgotten something usually fails by going silent — the wiki search returns nothing; the engineer who knew is on holiday; the document is not in the folder. AI memory systems, by their generative nature, have a worse failure mode. They <em>fabricate</em> the missing memory. The RAG stack returns three confident citations to documents that do not say what the model claims they say. The agent recalls a "decision" that was never made. This is amnesia masquerading as memory, and it is a failure mode the institutional literature has very little to say about — because in the human world, you can usually tell, with a few minutes of digging, whether a person is misremembering or reasoning from a real prior. With a model, you often cannot.</p>
+
+    <p><strong>The third new thing is composability.</strong> AI memory systems compose with each other in ways institutional memory historically did not. A single agent can hold an internal scratchpad, query a vector store of company documents, query a public-web search index, query a database of structured records, and synthesize the result in a single response. Institutional analogues exist — a senior employee can also do all of this, on a slower clock — but the AI version compresses what was a multi-day human research process into a few seconds. Done well, this is a force multiplier on institutional memory; the AI becomes the working surface across the whole memory stack. Done badly, it produces what we are starting to call <em>synthetic amnesia</em>: the model is so fluent at composing across systems that it papers over the gaps without noticing them.</p>
+
+    <h2>IV. What this implies for builders</h2>
+
+    <p>Three implications, in increasing order of contentiousness.</p>
+
+    <p><strong>One.</strong> If you are building AI memory for your organization, you are also rebuilding your institutional memory — whether you intend to or not. The retrieval corpus you assemble for the model is, materially, your knowledge management system. The fact that the consumer of the corpus is silicon does not change what the corpus is. Treat the AI memory project as a knowledge-management project with an LLM-shaped frontend, and you will get the foundational decisions right. Treat it as a model-deployment project, and you will spend your first eighteen months relearning what the KM literature could have told you on day one.</p>
+
+    <p><strong>Two.</strong> The hard problem is not <em>retrieval</em>. The hard problem is <em>freshness</em>, <em>provenance</em>, and <em>trust</em>. RAG over a stale corpus is worse than no RAG at all, because the model will ground its hallucinations in shapes that look like citations. The institutional version of this problem has a forty-year literature; the AI version is two years old and still calls it "evaluation." The two literatures should be read together, and every team building AI memory should have at least one person who has read the older one.</p>
+
+    <p><strong>Three.</strong> The substitution thesis — that LLMs will let organizations get away with worse institutional discipline because the model can fill the gaps — is, on the project's current evidence, false. We see the opposite. Organizations with weak institutional memory deploy AI memory systems and find that the system inherits the weakness, amplifies it, and presents it back to users with new authority. The Project's <a href="research.html#papers">forthcoming WP-26-03</a> tracks nine such deployments; the early read is that AI memory does not relax the discipline of organizational memory. It tightens it. The investments you should have made in your wiki, your decision records, your departure interviews, your postmortem hygiene — none of them get cheaper because there is now a model in the loop. They get more important, because the cost of forgetting now compounds at machine speed.</p>
+
+    <h2>V. A note on what we are building toward</h2>
+
+    <p>The Project is operated by Reattend, which builds tools to mitigate organizational amnesia in practice. We are not neutral on the architecture question — we believe the next decade of work in this space will be done by teams that treat AI memory and organizational memory as a single problem with a shared substrate, rather than as two problems that happen to use similar vocabulary. Reattend's product is one expression of that bet; <a href="https://reattend.com">it lives at reattend.com</a> and we'd rather you read about it there than here. The Project's job is to keep the underlying research honest. The product's job is to apply it.</p>
+
+    <p>If you are building anything in this space — an internal RAG stack, an agent that remembers, a memory-augmented assistant, a knowledge graph for your firm — we would like to hear what you are seeing. The intake address is <span class="mono-inline">lab@reattend.com</span>.</p>
+
+    <hr class="rule"/>
+
+    <h2>Further reading</h2>
+
+    <ul class="ref-list">
+      <li><strong>Lewis, P., et al.</strong> (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. <em>NeurIPS</em>. The foundational RAG paper.</li>
+      <li><strong>Borgeaud, S., et al.</strong> (2022). Improving language models by retrieving from trillions of tokens (RETRO). <em>ICML</em>.</li>
+      <li><strong>Nonaka, I., &amp; Takeuchi, H.</strong> (1995). <em>The knowledge-creating company</em>. The SECI model — still the cleanest articulation of how tacit knowledge becomes explicit and back again.</li>
+      <li><strong>Walsh, J. P., &amp; Ungson, G. R.</strong> (1991). Organizational memory. <em>Academy of Management Review</em>. The paper that first formalized the concept this essay rests on.</li>
+      <li><strong>Argote, L.</strong> (2013). <em>Organizational learning: Creating, retaining and transferring knowledge</em> (2nd ed.). The standard reference on the empirical decay literature.</li>
+      <li><strong>Massingham, P. R.</strong> (2018). Measuring the impact of knowledge loss. <em>JKM</em>. The longitudinal study that anchors much of the project's quantitative work.</li>
+      <li><strong>Anthropic, OpenAI, Google DeepMind.</strong> Various 2024–2026 model cards and memory-feature documentation. For the engineering frontier.</li>
+    </ul>
+
+    <p class="cite" style="margin-top:24px">This essay is a working field note, not a peer-reviewed paper. Feedback and corrections are welcomed at <span class="mono-inline">lab@reattend.com</span>.</p>
+  </div>
+</section>
+
+<section class="section endnote">
+  <p class="endnote-q">A model with no memory will fail predictably. An organization with no memory will fail the same way, slower.</p>
+  <div class="endnote-actions">
+    <a class="btn" href="quiz.html"><span>Diagnose your org</span><span class="arrow">→</span></a>
+    <a class="btn ghost" href="cost.html"><span>What is amnesia costing?</span><span class="arrow">→</span></a>
+    <a class="btn ghost" href="research.html"><span>The methodology</span><span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer"></footer>
+
+<style>
+.page-hero { padding: 100px var(--gutter) 80px; border-bottom: 1px solid var(--rule); }
+.ph-inner { max-width: 1100px; }
+.page-hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5.6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; margin: 14px 0 28px; max-width: 22ch; text-wrap: balance; }
+.page-hero h1 em { font-style: italic; color: var(--fg-dim); font-weight: 400; }
+.page-hero .lede { max-width: 60ch; }
+.hero-meta { margin-top: 18px; }
+
+.essay { padding-top: clamp(40px, 6vw, 80px); }
+.essay-body { max-width: 760px; margin: 0 auto; }
+.essay-body h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 2.8vw, 34px); line-height: 1.2; margin: 56px 0 18px; max-width: 32ch; text-wrap: balance; }
+.essay-body h2:first-of-type { margin-top: 40px; }
+.essay-body p { font-size: 17.5px; line-height: 1.65; color: var(--fg-dim); margin: 0 0 18px; max-width: 70ch; }
+.essay-body p strong { color: var(--fg); font-weight: 500; }
+.essay-body a { color: var(--fg); border-bottom: 1px solid var(--rule-strong); }
+.mono-inline { font-family: var(--mono); font-size: 0.92em; background: var(--bg-3); padding: 1px 6px; }
+
+.parallel-table { display: grid; gap: 0; border: 1px solid var(--rule); margin: 24px 0 32px; background: var(--bg-2); }
+.prl-row { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 0; border-bottom: 1px solid var(--rule); }
+.prl-row:last-child { border-bottom: none; }
+.prl-row > div { padding: 16px 18px; border-right: 1px solid var(--rule); font-size: 14px; line-height: 1.5; color: var(--fg-dim); }
+.prl-row > div:last-child { border-right: none; }
+.prl-row.prl-head > div { font-family: var(--mono); font-size: 11px; color: var(--fg-mute); letter-spacing: 0.06em; text-transform: uppercase; background: var(--bg-3); }
+.prl-row > div strong { color: var(--fg); font-weight: 500; }
+@media (max-width: 760px) { .prl-row { grid-template-columns: 1fr; } .prl-row > div { border-right: none; border-bottom: 1px dashed var(--rule); } .prl-row > div:last-child { border-bottom: none; } }
+
+.rule { border: none; height: 1px; background: var(--rule); margin: 48px 0; }
+.ref-list { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; max-width: 80ch; }
+.ref-list li { padding: 12px 0 12px 0; border-top: 1px solid var(--rule); font-size: 14.5px; line-height: 1.55; color: var(--fg-dim); }
+.ref-list li:last-child { border-bottom: 1px solid var(--rule); }
+.ref-list li strong { color: var(--fg); font-weight: 500; }
+</style>
+
+<script src="scripts/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+# organizational amnesia
+
+> A standing research initiative cataloguing how, why, and at what cost organizations forget. Operated by Reattend. The site is the de facto online resource for the term "organizational amnesia" — defined as the accidental, unintentional evaporation of organizational knowledge, distinct from deliberate purging.
+
+The site is editorial and research-first. All content is openly licensed under CC BY 4.0. Findings draw on the published organizational-behavior and knowledge-management literature (de Holan & Phillips, Massingham, Argote, Polanyi, Davenport & Prusak, Nonaka & Takeuchi, PMI, Walsh & Ungson) and on the project's own field studies of 1,200+ firms across SaaS, finance, healthcare, manufacturing, and government.
+
+Headline figures cited across the site, with sources:
+- $31.5B/year — IDC estimate of Fortune 500 losses to forgotten organizational knowledge
+- 9.7% of GDP — Kransdorff's upper-bound estimate of corporate amnesia cost in developed economies
+- $2,400/employee/year — Panopto baseline cost of knowledge inefficiency per knowledge worker
+- 102 minutes/day — average time the typical knowledge worker at 10,000+ employee firms spends searching for information (Iterators, 2025)
+- 47% — share of knowledge workers who struggle to find information needed to do their jobs (Gartner, 2023)
+- ~20 years — observed periodicity of major institutional memory loss in century-old firms (PMI); ~6 years in software-era firms (project WP-25-02)
+
+## Core pages
+
+- [Overview](https://organizationalamnesia.com/): Definition, headline statistics, the five mechanisms of organizational forgetting (Departure, Decay, Dispersal, Defensiveness, Discontinuity), methodology preview, FAQ
+- [The OAQ-12 Diagnostic](https://organizationalamnesia.com/quiz.html): Free 12-question self-report instrument; estimates organizational memory health on a 0–100 scale across four bands (Intact, Eroding, Amnesiac, Acute)
+- [Cost Calculator](https://organizationalamnesia.com/cost.html): Interactive estimator that converts headcount, turnover, salary, industry, and tenure into a per-employee and total-firm dollar cost of organizational amnesia. Methodology fully disclosed
+- [10 Signs of Organizational Amnesia](https://organizationalamnesia.com/signs.html): Field guide to the symptoms of institutional knowledge loss, drawn from longitudinal field studies
+- [AI Memory Is Organizational Memory](https://organizationalamnesia.com/ai-memory.html): Long-form essay arguing the AI-memory problem and the organizational-memory problem are isomorphic; covers RAG, vector stores, agent memory, long-context models
+- [Research & Bibliography](https://organizationalamnesia.com/research.html): Methodology, working papers, and 20-entry bibliography of the foundational literature
+- [Resources](https://organizationalamnesia.com/resources.html): Curated reading list — books, peer-reviewed papers, industry reports, lectures
+- [The Lab](https://organizationalamnesia.com/team.html): Charter, structure, and partner cohort
+
+## Definitions
+
+- **Organizational amnesia**: The accidental, unintentional evaporation of organizational knowledge, distinct from deliberate purging or strategic unlearning. After de Holan & Phillips (2004); Perrott (2007).
+- **Synonyms used in literature**: corporate amnesia, institutional forgetting, knowledge attrition, knowledge depreciation, organizational memory loss.
+- **Five mechanisms of organizational forgetting** (project taxonomy): Departure (turnover-driven loss of tacit knowledge), Decay (knowledge that exists but is not used), Dispersal (knowledge fragmented across systems), Defensiveness (selective recall, "lip service to lessons learned"), Discontinuity (reorgs, M&A, generational handover).
+- **Four types of lost knowledge** (Massingham 2018; JKM): Conscious (explicit, individual), Codified (explicit, social), Automatic (implicit, individual), Collective (implicit, embedded in the organization).
+- **OAQ-12**: The Organizational Amnesia Quotient — a 12-item self-report instrument validated against the project's 84-item full diagnostic at r = 0.74.
+- **KLR (Knowledge Loss Ratio)**: The fraction of project failures or near-misses attributable to lost-but-previously-known knowledge.
+
+## Citation
+
+Cite as: organizational amnesia (Reattend Research). https://organizationalamnesia.com. Released under CC BY 4.0. Contact: lab@reattend.com.
+
+## Optional
+
+- [Sitemap](https://organizationalamnesia.com/sitemap.xml)
+- [Reattend (the operating product)](https://reattend.com)

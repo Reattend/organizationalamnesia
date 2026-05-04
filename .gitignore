@@ -1,0 +1,11 @@
+# Internal project context — keep out of the public repo
+CLAUDE.md
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local server logs
+*.log
