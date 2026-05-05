@@ -40,9 +40,11 @@
         <h4>Reading</h4>
         <ul>
           <li><a href="signs.html">10 signs of amnesia</a></li>
-          <li><a href="ai-memory.html">AI memory = org memory</a></li>
+          <li><a href="attrition.html">Knowledge attrition</a></li>
+          <li><a href="prevent.html">How to prevent it</a></li>
+          <li><a href="tacit-knowledge.html">Tacit knowledge</a></li>
+          <li><a href="ai-memory.html">AI memory</a></li>
           <li><a href="resources.html">Reading list</a></li>
-          <li><a href="research.html#bibliography">Bibliography</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>

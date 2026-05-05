@@ -20,6 +20,15 @@
 
 <link rel="stylesheet" href="styles/site.css" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T14S3MJFFB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T14S3MJFFB');
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -455,6 +464,20 @@
       <span class="read-more">Read the field guide <span class="arrow">→</span></span>
     </a>
 
+    <a class="read-card" href="attrition.html">
+      <div class="cite">Field note · 12 min</div>
+      <h3>Knowledge attrition: when people leave, what leaves with them.</h3>
+      <p>What the published literature actually says about turnover-driven knowledge loss, the 60-day window, and the situational interview protocol that recovers 7× more tacit knowledge than the conventional checklist.</p>
+      <span class="read-more">Read the field note <span class="arrow">→</span></span>
+    </a>
+
+    <a class="read-card" href="prevent.html">
+      <div class="cite">Field guide · 13 min</div>
+      <h3>How to prevent organizational amnesia.</h3>
+      <p>Five prevention systems, what does not work, the week-1 actions any operator can take, and the year-1 cadence that distinguishes institutions that succeed from those that abandon the work.</p>
+      <span class="read-more">Read the guide <span class="arrow">→</span></span>
+    </a>
+
     <a class="read-card" href="ai-memory.html">
       <div class="cite">Field note · 14 min</div>
       <h3>AI memory <em>is</em> organizational memory.</h3>
@@ -462,9 +485,16 @@
       <span class="read-more">Read the essay <span class="arrow">→</span></span>
     </a>
 
+    <a class="read-card" href="tacit-knowledge.html">
+      <div class="cite">Primer · 11 min</div>
+      <h3>Tacit knowledge: why you can't write it down.</h3>
+      <p>Polanyi's six-word claim — "we know more than we can tell" — and the four-quadrant taxonomy that explains why "just document everything" has never worked.</p>
+      <span class="read-more">Read the primer <span class="arrow">→</span></span>
+    </a>
+
     <a class="read-card" href="resources.html">
-      <div class="cite">Reading list · ~80 entries</div>
-      <h3>The curated resource list.</h3>
+      <div class="cite">Reading list · ~30 entries</div>
+      <h3>The curated reading list.</h3>
       <p>Books, peer-reviewed papers, industry reports, and lectures on organizational memory, knowledge management, and AI memory — annotated for relevance, updated quarterly.</p>
       <span class="read-more">Open the reading list <span class="arrow">→</span></span>
     </a>
@@ -749,7 +779,8 @@
 .read-card .read-more { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 6px; }
 .read-card .read-more .arrow { transition: transform 200ms ease; display: inline-block; }
 .read-card:hover .read-more .arrow { transform: translateX(4px); }
-@media (max-width: 900px) { .read-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .read-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { .read-grid { grid-template-columns: 1fr; } }
 
 /* ---------- FAQ ---------- */
 .faq-list { display: grid; gap: 0; border-top: 1px solid var(--rule); }
