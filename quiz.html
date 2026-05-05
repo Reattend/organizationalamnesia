@@ -31,7 +31,7 @@
     <div class="quiz-header">
       <div class="eyebrow">Instrument · OAQ-12 · Form A</div>
       <h1>The Organizational Amnesia Quotient.</h1>
-      <p class="lede">A 12-item field instrument adapted from the project's research protocol. Estimates how much of your organization's collective memory is, at this moment, at risk.</p>
+      <p class="lede">A 12-item field instrument adapted from our research protocol. Estimates how much of your organization's collective memory is, at this moment, at risk.</p>
       <div class="cite quiz-meta">~4 min · Anonymous · Results not stored</div>
     </div>
 
@@ -289,7 +289,7 @@ function renderResult() {
   let band, bandIdx, blurb;
   if (oaq < 25) { band = "Intact"; bandIdx = 0; blurb = "Your organization remembers itself unusually well. The architecture is doing its job. Stay vigilant during scaling and leadership transitions; this is also where intact memory most often quietly degrades."; }
   else if (oaq < 50) { band = "Eroding"; bandIdx = 1; blurb = "Memory is largely intact but starting to drift. The signals are subtle - a stale runbook here, a re-litigated decision there. Untreated, this is the band that compounds the fastest. The next eighteen months are decisive."; }
-  else if (oaq < 75) { band = "Amnesiac"; bandIdx = 2; blurb = "Your organization is, by the project's definition, amnesiac. Decisions are being re-made. Postmortems are being re-written. Tacit knowledge has begun to live exclusively in a small number of overburdened people. The cost is real and accruing."; }
+  else if (oaq < 75) { band = "Amnesiac"; bandIdx = 2; blurb = "Your organization is, by our definition, amnesiac. Decisions are being re-made. Postmortems are being re-written. Tacit knowledge has begun to live exclusively in a small number of overburdened people. The cost is real and accruing."; }
   else { band = "Acute"; bandIdx = 3; blurb = "Acute organizational amnesia. The institution is operating largely from individual memory, not collective memory. Departures, even routine ones, are likely to remove load-bearing knowledge. This is the band where preventable failures concentrate."; }
 
   const recs = generateRecs(sectionScores, sectionCounts);

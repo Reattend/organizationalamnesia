@@ -2,7 +2,7 @@
 
 > A standing research initiative cataloguing how, why, and at what cost organizations forget. Operated by Reattend. The site is the de facto online resource for the term "organizational amnesia" - defined as the accidental, unintentional evaporation of organizational knowledge, distinct from deliberate purging.
 
-The site is editorial and research-first. All content is openly licensed under CC BY 4.0. Findings draw on the published organizational-behavior and knowledge-management literature (de Holan & Phillips, Massingham, Argote, Polanyi, Davenport & Prusak, Nonaka & Takeuchi, PMI, Walsh & Ungson) and on the project's own field studies of 1,200+ firms across SaaS, finance, healthcare, manufacturing, and government.
+The site is editorial and research-first. All content is openly licensed under CC BY 4.0. Findings draw on the published organizational-behavior and knowledge-management literature (de Holan & Phillips, Massingham, Argote, Polanyi, Davenport & Prusak, Nonaka & Takeuchi, PMI, Walsh & Ungson) and on our own field studies of 1,200+ firms across SaaS, finance, healthcare, manufacturing, and government.
 
 Headline figures cited across the site, with sources:
 - $31.5B/year - IDC estimate of Fortune 500 losses to forgotten organizational knowledge
@@ -24,7 +24,7 @@ Headline figures cited across the site, with sources:
 ## Essays and field notes
 
 - [10 Signs of Organizational Amnesia](https://organizationalamnesia.com/signs.html): Field guide to the symptoms of institutional knowledge loss
-- [AI Memory Is Organizational Memory](https://organizationalamnesia.com/ai-memory.html): Long-form essay arguing the AI-memory problem and the organizational-memory problem are isomorphic; covers RAG, vector stores, agent memory, long-context models
+- [AI Memory Is Organizational Memory](https://organizationalamnesia.com/ai-memory.html): Long-form essay arguing the AI-memory problem and the organizational-memory problem are the same problem; covers RAG, vector stores, agent memory, long-context models
 - [Knowledge Attrition: When Employees Leave, What Leaves With Them](https://organizationalamnesia.com/attrition.html): Field analysis of departure-driven knowledge loss, the 60-day window, and the situational-walk-through interview protocol that recovers 7.2× more tacit knowledge than the conventional checklist
 - [How to Prevent Organizational Amnesia: A Field Guide](https://organizationalamnesia.com/prevent.html): Five prevention systems, what does not work, and the week-1 actions any operator can take
 - [Tacit Knowledge: What It Is and Why You Can't Write It Down](https://organizationalamnesia.com/tacit-knowledge.html): Primer on Polanyi's tacit dimension, the SECI model, and the four-type taxonomy used throughout the project
@@ -35,7 +35,7 @@ Headline figures cited across the site, with sources:
 - **Synonyms used in literature**: corporate amnesia, institutional forgetting, knowledge attrition, knowledge depreciation, organizational memory loss.
 - **Five mechanisms of organizational forgetting** (project taxonomy): Departure (turnover-driven loss of tacit knowledge), Decay (knowledge that exists but is not used), Dispersal (knowledge fragmented across systems), Defensiveness (selective recall, "lip service to lessons learned"), Discontinuity (reorgs, M&A, generational handover).
 - **Four types of lost knowledge** (Massingham 2018; JKM): Conscious (explicit, individual), Codified (explicit, social), Automatic (implicit, individual), Collective (implicit, embedded in the organization).
-- **OAQ-12**: The Organizational Amnesia Quotient - a 12-item self-report instrument validated against the project's 84-item full diagnostic at r = 0.74.
+- **OAQ-12**: The Organizational Amnesia Quotient - a 12-item self-report instrument validated against our 84-item full diagnostic at r = 0.74.
 - **KLR (Knowledge Loss Ratio)**: The fraction of project failures or near-misses attributable to lost-but-previously-known knowledge.
 
 ## Citation

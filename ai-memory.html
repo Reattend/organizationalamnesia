@@ -9,7 +9,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="AI Memory Is Organizational Memory" />
-<meta property="og:description" content="A long-form argument that the AI memory problem and the organizational memory problem are isomorphic - with implications for what to build and what to expect." />
+<meta property="og:description" content="A long-form argument that the AI memory problem and the organizational memory problem are the same problem - with implications for what to build and what to expect." />
 <meta property="og:url" content="https://organizationalamnesia.com/ai-memory.html" />
 
 <script type="application/ld+json">
@@ -54,9 +54,9 @@
 <section class="section essay">
   <div class="essay-body body">
 
-    <p class="dropcap">A claim, to begin with: the AI-memory problem is not a new problem. It is the organizational-memory problem, restaged at a faster clock speed and on a substrate that does not get tired. Treat the two as the same problem and the AI work gets easier; treat them as separate and you will rebuild, badly, what the knowledge-management literature has been working on since the 1990s.</p>
+    <p class="dropcap">A claim, to begin with: the AI-memory problem is not a new problem. It is the organizational-memory problem, restaged at a faster clock speed and on a system that does not get tired. Treat the two as the same problem and the AI work gets easier; treat them as separate and you will rebuild, badly, what the knowledge-management literature has been working on since the 1990s.</p>
 
-    <p>This essay makes that case in three movements. First, what the two problems actually are, and why they are isomorphic. Second, the architectures - RAG, vector stores, knowledge graphs, agent memory, long-context windows - and the older institutional architectures they recapitulate. Third, what is genuinely new - the failure modes that did not exist when memory lived in human heads and corporate wikis.</p>
+    <p>This essay makes that case in three movements. First, what the two problems actually are, and why they are the same problem. Second, the architectures - RAG, vector stores, knowledge graphs, agent memory, long-context windows - and the older institutional architectures they recapitulate. Third, what is genuinely new - the failure modes that did not exist when memory lived in human heads and corporate wikis.</p>
 
     <h2>I. Two views of the same animal</h2>
 
@@ -68,7 +68,7 @@
 
     <h2>II. The architecture parallel</h2>
 
-    <p>The clearest way to see the isomorphism is to walk through the AI memory stack and name what it recreates on the institutional side. The list below is not an analogy in the loose sense; it is the same problems, with a different substrate.</p>
+    <p>The clearest way to see the match is to walk through the AI memory stack and name what it recreates on the institutional side. The list below is not an analogy in the loose sense; it is the same problems, in a different system.</p>
 
     <div class="parallel-table">
       <div class="prl-row prl-head">
@@ -108,13 +108,13 @@
       </div>
     </div>
 
-    <p>What the table makes legible: every category of AI memory has at least one mature institutional analogue with a literature you can read and field experience you can borrow. The corollary: every category of AI memory has at least one mature failure mode that the institutional version has been failing at for thirty years. RAG stacks rot the way wikis rot. Agents lose context the way junior engineers lose track. Knowledge graphs ossify the way over-specified runbooks ossify. The mechanisms are not new because the substrate is new; the substrate inherits the mechanisms.</p>
+    <p>What the table makes legible: every category of AI memory has at least one mature institutional analogue with a literature you can read and field experience you can borrow. The corollary: every category of AI memory has at least one mature failure mode that the institutional version has been failing at for thirty years. RAG stacks rot the way wikis rot. Agents lose context the way junior engineers lose track. Knowledge graphs ossify the way over-specified runbooks ossify. The mechanisms are not new because the system is new; the system inherits the mechanisms.</p>
 
     <h2>III. What is genuinely new</h2>
 
     <p>Three things are different. None of them invalidate the parallel; they sharpen it.</p>
 
-    <p><strong>The first new thing is speed.</strong> An organization forgets on a multi-year cycle - PMI's classical work finds a generational, ~20-year periodicity in century-old institutions; <a href="research.html#papers">recent project work (WP-25-02)</a> compresses that to roughly 6 years in software-era firms. An AI system, with no continuity by default, forgets on a per-session cycle. The institutional decay function and the AI decay function differ in time constant by six orders of magnitude. This means the standard institutional remedies - quarterly reviews, lessons-learned audits, postmortem re-reads - are not unit-compatible with AI memory. The cadence of the discipline has to compress to match the cadence of the substrate.</p>
+    <p><strong>The first new thing is speed.</strong> An organization forgets on a multi-year cycle - PMI's classical work finds a generational, ~20-year periodicity in century-old institutions; <a href="research.html#papers">recent project work (WP-25-02)</a> compresses that to roughly 6 years in software-era firms. An AI system, with no continuity by default, forgets on a per-session cycle. The institutional decay function and the AI decay function differ in time constant by six orders of magnitude. This means the standard institutional remedies - quarterly reviews, lessons-learned audits, postmortem re-reads - are not unit-compatible with AI memory. The rhythm of the discipline has to compress to match the rhythm of the system.</p>
 
     <p><strong>The second new thing is hallucinated continuity.</strong> An institutional system that has forgotten something usually fails by going silent - the wiki search returns nothing; the engineer who knew is on holiday; the document is not in the folder. AI memory systems, by their generative nature, have a worse failure mode. They <em>fabricate</em> the missing memory. The RAG stack returns three confident citations to documents that do not say what the model claims they say. The agent recalls a "decision" that was never made. This is amnesia masquerading as memory, and it is a failure mode the institutional literature has very little to say about - because in the human world, you can usually tell, with a few minutes of digging, whether a person is misremembering or reasoning from a real prior. With a model, you often cannot.</p>
 
@@ -128,11 +128,11 @@
 
     <p><strong>Two.</strong> The hard problem is not <em>retrieval</em>. The hard problem is <em>freshness</em>, <em>provenance</em>, and <em>trust</em>. RAG over a stale corpus is worse than no RAG at all, because the model will ground its hallucinations in shapes that look like citations. The institutional version of this problem has a forty-year literature; the AI version is two years old and still calls it "evaluation." The two literatures should be read together, and every team building AI memory should have at least one person who has read the older one.</p>
 
-    <p><strong>Three.</strong> The substitution thesis - that LLMs will let organizations get away with worse institutional discipline because the model can fill the gaps - is, on the project's current evidence, false. We see the opposite. Organizations with weak institutional memory deploy AI memory systems and find that the system inherits the weakness, amplifies it, and presents it back to users with new authority. The Project's <a href="research.html#papers">forthcoming WP-26-03</a> tracks nine such deployments; the early read is that AI memory does not relax the discipline of organizational memory. It tightens it. The investments you should have made in your wiki, your decision records, your departure interviews, your postmortem hygiene - none of them get cheaper because there is now a model in the loop. They get more important, because the cost of forgetting now compounds at machine speed.</p>
+    <p><strong>Three.</strong> The substitution thesis - that LLMs will let organizations get away with worse institutional discipline because the model can fill the gaps - is, on our current evidence, false. We see the opposite. Organizations with weak institutional memory deploy AI memory systems and find that the system inherits the weakness, amplifies it, and presents it back to users with new authority. The Project's <a href="research.html#papers">forthcoming WP-26-03</a> tracks nine such deployments; the early read is that AI memory does not relax the discipline of organizational memory. It tightens it. The investments you should have made in your wiki, your decision records, your departure interviews, your postmortem hygiene - none of them get cheaper because there is now a model in the loop. They get more important, because the cost of forgetting now compounds at machine speed.</p>
 
     <h2>V. A note on what we are building toward</h2>
 
-    <p>The Project is operated by Reattend, which builds tools to mitigate organizational amnesia in practice. We are not neutral on the architecture question - we believe the next decade of work in this space will be done by teams that treat AI memory and organizational memory as a single problem with a shared substrate, rather than as two problems that happen to use similar vocabulary. Reattend's product is one expression of that bet; <a href="https://reattend.com">it lives at reattend.com</a> and we'd rather you read about it there than here. The Project's job is to keep the underlying research honest. The product's job is to apply it.</p>
+    <p>The Project is operated by Reattend, which builds tools to mitigate organizational amnesia in practice. We are not neutral on the architecture question - we believe the next decade of work in this space will be done by teams that treat AI memory and organizational memory as a single problem with a shared base, rather than as two problems that happen to use similar vocabulary. Reattend's product is one expression of that bet; <a href="https://reattend.com">it lives at reattend.com</a> and we'd rather you read about it there than here. The Project's job is to keep the underlying research honest. The product's job is to apply it.</p>
 
     <p>If you are building anything in this space - an internal RAG stack, an agent that remembers, a memory-augmented assistant, a knowledge graph for your firm - we would like to hear what you are seeing. The intake address is <span class="mono-inline">lab@reattend.com</span>.</p>
 
@@ -146,7 +146,7 @@
       <li><strong>Nonaka, I., &amp; Takeuchi, H.</strong> (1995). <em>The knowledge-creating company</em>. The SECI model - still the cleanest articulation of how tacit knowledge becomes explicit and back again.</li>
       <li><strong>Walsh, J. P., &amp; Ungson, G. R.</strong> (1991). Organizational memory. <em>Academy of Management Review</em>. The paper that first formalized the concept this essay rests on.</li>
       <li><strong>Argote, L.</strong> (2013). <em>Organizational learning: Creating, retaining and transferring knowledge</em> (2nd ed.). The standard reference on the empirical decay literature.</li>
-      <li><strong>Massingham, P. R.</strong> (2018). Measuring the impact of knowledge loss. <em>JKM</em>. The longitudinal study that anchors much of the project's quantitative work.</li>
+      <li><strong>Massingham, P. R.</strong> (2018). Measuring the impact of knowledge loss. <em>JKM</em>. The longitudinal study that anchors much of our quantitative work.</li>
       <li><strong>Anthropic, OpenAI, Google DeepMind.</strong> Various 2024–2026 model cards and memory-feature documentation. For the engineering frontier.</li>
     </ul>
 
