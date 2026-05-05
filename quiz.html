@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Organizational Amnesia Diagnostic (OAQ-12) — Free Test</title>
+<title>The Organizational Amnesia Diagnostic (OAQ-12) - Free Test</title>
 <meta name="description" content="A 12-question diagnostic to estimate the memory health of your organization in four minutes. Anonymous, no login, results not stored." />
 <link rel="canonical" href="https://organizationalamnesia.com/quiz.html" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -129,24 +129,24 @@
 const QUESTIONS = [
   { section: "Documentation", q: "If your three most senior individual contributors quit on the same Friday, by what Monday could a peer team reconstruct what they were working on?",
     opts: [
-      { t: "Same Monday — it's all written down.", s: 0 },
+      { t: "Same Monday - it's all written down.", s: 0 },
       { t: "Within a week, with effort.", s: 1 },
       { t: "Within a month, with significant rework.", s: 2 },
       { t: "Honestly, we couldn't.", s: 3 },
     ]},
-  { section: "Documentation", q: "How often does someone on your team say \"there's a doc for that\" — and the doc turns out to be wrong, outdated, or unfindable?",
+  { section: "Documentation", q: "How often does someone on your team say \"there's a doc for that\" - and the doc turns out to be wrong, outdated, or unfindable?",
     opts: [
       { t: "Rarely. Docs are trusted.", s: 0 },
-      { t: "Occasionally — a known annoyance.", s: 1 },
+      { t: "Occasionally - a known annoyance.", s: 1 },
       { t: "Most weeks.", s: 2 },
       { t: "Constantly. The doc is a starting point, not an answer.", s: 3 },
     ]},
   { section: "Departure", q: "What's your annual employee turnover, roughly?",
     opts: [
-      { t: "Under 8% — quite stable.", s: 0 },
-      { t: "8–12% — typical.", s: 1 },
-      { t: "12–20% — elevated.", s: 2 },
-      { t: "Over 20% — or a recent layoff/RIF.", s: 3 },
+      { t: "Under 8% - quite stable.", s: 0 },
+      { t: "8–12% - typical.", s: 1 },
+      { t: "12–20% - elevated.", s: 2 },
+      { t: "Over 20% - or a recent layoff/RIF.", s: 3 },
     ]},
   { section: "Departure", q: "When someone resigns, what does their last two weeks look like?",
     opts: [
@@ -157,14 +157,14 @@ const QUESTIONS = [
     ]},
   { section: "Search", q: "When you need a piece of internal information you've never accessed before, how often do you find it on the first try?",
     opts: [
-      { t: "Almost always — search works.", s: 0 },
+      { t: "Almost always - search works.", s: 0 },
       { t: "Roughly two-thirds of the time.", s: 1 },
-      { t: "Less than half — I usually ask a person.", s: 2 },
+      { t: "Less than half - I usually ask a person.", s: 2 },
       { t: "Asking a person <em>is</em> the search.", s: 3 },
     ]},
   { section: "Search", q: "How many systems would you have to consult to answer the question \"what was decided in the redesign last year and why?\"",
     opts: [
-      { t: "One — there's a canonical record.", s: 0 },
+      { t: "One - there's a canonical record.", s: 0 },
       { t: "Two or three.", s: 1 },
       { t: "Four to six.", s: 2 },
       { t: "I'd start by guessing who was in the room.", s: 3 },
@@ -176,9 +176,9 @@ const QUESTIONS = [
       { t: "A handful of times.", s: 2 },
       { t: "It's a recurring pattern.", s: 3 },
     ]},
-  { section: "Repetition", q: "Do new hires regularly surface things that surprise long-tenured staff — bugs, processes, customer pain — that the org used to know about and forgot?",
+  { section: "Repetition", q: "Do new hires regularly surface things that surprise long-tenured staff - bugs, processes, customer pain - that the org used to know about and forgot?",
     opts: [
-      { t: "Almost never — institutional memory is intact.", s: 0 },
+      { t: "Almost never - institutional memory is intact.", s: 0 },
       { t: "Occasionally.", s: 1 },
       { t: "Often.", s: 2 },
       { t: "It's the most useful thing new hires do.", s: 3 },
@@ -190,9 +190,9 @@ const QUESTIONS = [
       { t: "It's filed; nobody re-reads it.", s: 2 },
       { t: "We don't write them, or we don't finish them.", s: 3 },
     ]},
-  { section: "Tacit", q: "If your most experienced engineer or operator said \"I'd never do it that way\" — could anyone else explain <em>why</em>?",
+  { section: "Tacit", q: "If your most experienced engineer or operator said \"I'd never do it that way\" - could anyone else explain <em>why</em>?",
     opts: [
-      { t: "Yes — the reasoning is widely shared.", s: 0 },
+      { t: "Yes - the reasoning is widely shared.", s: 0 },
       { t: "Some of it is shared; not all.", s: 1 },
       { t: "Only after a long conversation with them.", s: 2 },
       { t: "No. The reasoning lives only in their head.", s: 3 },
@@ -200,14 +200,14 @@ const QUESTIONS = [
   { section: "Continuity", q: "Has your organization gone through a reorg, leadership change, or acquisition in the last 24 months?",
     opts: [
       { t: "No major continuity events.", s: 0 },
-      { t: "One — handled with structured handover.", s: 1 },
-      { t: "One — handled informally.", s: 2 },
+      { t: "One - handled with structured handover.", s: 1 },
+      { t: "One - handled informally.", s: 2 },
       { t: "Multiple, or one with significant turnover.", s: 3 },
     ]},
   { section: "Continuity", q: "If we asked five long-tenured employees to write down \"the unwritten rules of how things really work here,\" how much would the lists overlap?",
     opts: [
-      { t: "Substantially — there's a shared culture.", s: 0 },
-      { t: "Mostly — with a few divergences.", s: 1 },
+      { t: "Substantially - there's a shared culture.", s: 0 },
+      { t: "Mostly - with a few divergences.", s: 1 },
       { t: "Some agreement, lots of variance.", s: 2 },
       { t: "Five different organizations.", s: 3 },
     ]},
@@ -288,7 +288,7 @@ function renderResult() {
 
   let band, bandIdx, blurb;
   if (oaq < 25) { band = "Intact"; bandIdx = 0; blurb = "Your organization remembers itself unusually well. The architecture is doing its job. Stay vigilant during scaling and leadership transitions; this is also where intact memory most often quietly degrades."; }
-  else if (oaq < 50) { band = "Eroding"; bandIdx = 1; blurb = "Memory is largely intact but starting to drift. The signals are subtle — a stale runbook here, a re-litigated decision there. Untreated, this is the band that compounds the fastest. The next eighteen months are decisive."; }
+  else if (oaq < 50) { band = "Eroding"; bandIdx = 1; blurb = "Memory is largely intact but starting to drift. The signals are subtle - a stale runbook here, a re-litigated decision there. Untreated, this is the band that compounds the fastest. The next eighteen months are decisive."; }
   else if (oaq < 75) { band = "Amnesiac"; bandIdx = 2; blurb = "Your organization is, by the project's definition, amnesiac. Decisions are being re-made. Postmortems are being re-written. Tacit knowledge has begun to live exclusively in a small number of overburdened people. The cost is real and accruing."; }
   else { band = "Acute"; bandIdx = 3; blurb = "Acute organizational amnesia. The institution is operating largely from individual memory, not collective memory. Departures, even routine ones, are likely to remove load-bearing knowledge. This is the band where preventable failures concentrate."; }
 
@@ -363,7 +363,7 @@ function generateRecs(scores, counts) {
   if (ratio("Repetition") >= 0.5) out.push({h: "Index decisions, not just documents.", p: "Postmortems and decision records that aren't searchable by future-you are not memory. Tag every meaningful decision with the question it answered, not just the conclusion."});
   if (ratio("Postmortems") >= 0.5) out.push({h: "Re-read your last five postmortems before planning the next quarter.", p: "PMI's research identifies giving lip service to lessons learned as the single most common driver of corporate amnesia. The fix is mechanical: schedule the re-read."});
   if (ratio("Tacit") >= 0.5) out.push({h: "Pair the load-bearing humans.", p: "Tacit knowledge transfers through proximity, not documents. Identify the 3–5 people who 'just know' how things work and pair them with successors before, not during, the transition."});
-  if (ratio("Continuity") >= 0.5) out.push({h: "Write down the unwritten rules — together.", p: "Run a 90-minute workshop where five long-tenured staff list the things 'everyone knows' about how the place works. The differences in their lists are where amnesia lives."});
+  if (ratio("Continuity") >= 0.5) out.push({h: "Write down the unwritten rules - together.", p: "Run a 90-minute workshop where five long-tenured staff list the things 'everyone knows' about how the place works. The differences in their lists are where amnesia lives."});
   if (out.length < 3) out.push({h: "Stay measured.", p: "A low score is not a permanent state. The dimensions most likely to degrade are the ones currently strongest, because they get the least attention."});
   return out.slice(0, 5);
 }

@@ -1,5 +1,5 @@
 /* ============================================================
-   organizationalamnesia.com — shared stylesheet
+   organizationalamnesia.com - shared stylesheet
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -259,7 +259,7 @@ a:hover { border-bottom-color: var(--accent); color: var(--accent); }
    Mobile / responsive pass
    ============================================================ */
 
-/* Topbar — stack on phones; hide center; horizontal-scroll nav */
+/* Topbar - stack on phones; hide center; horizontal-scroll nav */
 @media (max-width: 760px) {
   .topbar {
     grid-template-columns: 1fr;
@@ -281,12 +281,12 @@ a:hover { border-bottom-color: var(--accent); color: var(--accent); }
   .topbar .brand { font-size: 14px; }
 }
 
-/* Footer — collapse to single column on phones */
+/* Footer - collapse to single column on phones */
 @media (max-width: 520px) {
   .footer { grid-template-columns: 1fr; gap: 28px; padding: 56px var(--gutter) 48px; }
 }
 
-/* Touch targets — buttons should be ≥44px on touch */
+/* Touch targets - buttons should be ≥44px on touch */
 @media (max-width: 760px) {
   .btn {
     padding: 13px 18px;
@@ -295,7 +295,7 @@ a:hover { border-bottom-color: var(--accent); color: var(--accent); }
   }
 }
 
-/* Section spacing — slightly tighter on phones */
+/* Section spacing - slightly tighter on phones */
 @media (max-width: 600px) {
   body { font-size: 17px; }
   .section { padding: clamp(48px, 11vw, 80px) var(--gutter); }
