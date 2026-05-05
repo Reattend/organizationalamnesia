@@ -51,7 +51,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li>hello@organizationalamnesia.com</li>
+          <li>pb@reattend.ai</li>
           <li>ISSN 2998-4471</li>
         </ul>
       </div>
