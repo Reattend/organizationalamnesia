@@ -24,7 +24,7 @@
     f.innerHTML = `
       <div>
         <div class="imprint">organizational amnesia</div>
-        <div class="colophon">An ongoing research initiative cataloguing how, why, and at what cost organizations forget. Operated by <a href="https://reattend.com">Reattend</a>, ${new Date().getFullYear()}. All findings released under CC&nbsp;BY&nbsp;4.0.</div>
+        <div class="colophon">An independent research initiative cataloguing how, why, and at what cost organizations forget. ${new Date().getFullYear()}. All findings released under CC&nbsp;BY&nbsp;4.0.</div>
       </div>
       <div>
         <h4>Sections</h4>
@@ -51,8 +51,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li>lab@reattend.com</li>
-          <li><a href="https://reattend.com">reattend.com</a></li>
+          <li>hello@organizationalamnesia.com</li>
           <li>ISSN 2998-4471</li>
         </ul>
       </div>

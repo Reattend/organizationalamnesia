@@ -1,6 +1,6 @@
 # organizational amnesia
 
-> A standing research initiative cataloguing how, why, and at what cost organizations forget. Operated by Reattend. The site is the de facto online resource for the term "organizational amnesia" - defined as the accidental, unintentional evaporation of organizational knowledge, distinct from deliberate purging.
+> An independent research initiative cataloguing how, why, and at what cost organizations forget. The site is the de facto online resource for the term "organizational amnesia" - defined as the accidental, unintentional evaporation of organizational knowledge, distinct from deliberate purging.
 
 The site is editorial and research-first. All content is openly licensed under CC BY 4.0. Findings draw on the published organizational-behavior and knowledge-management literature (de Holan & Phillips, Massingham, Argote, Polanyi, Davenport & Prusak, Nonaka & Takeuchi, PMI, Walsh & Ungson) and on our own field studies of 1,200+ firms across SaaS, finance, healthcare, manufacturing, and government.
 
@@ -40,9 +40,8 @@ Headline figures cited across the site, with sources:
 
 ## Citation
 
-Cite as: organizational amnesia (Reattend Research). https://organizationalamnesia.com. Released under CC BY 4.0. Contact: lab@reattend.com.
+Cite as: organizational amnesia (the Organizational Amnesia Project). https://organizationalamnesia.com. Released under CC BY 4.0. Contact: hello@organizationalamnesia.com.
 
 ## Optional
 
 - [Sitemap](https://organizationalamnesia.com/sitemap.xml)
-- [Reattend (the operating product)](https://reattend.com)
