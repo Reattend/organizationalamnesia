@@ -1,26 +1,99 @@
+# organizationalamnesia.com now lives at https://reattend.com/amnesia
+# (moved 2026-09-12). This site only redirects: every old page 301s to its
+# exact new URL, so any ranking or backlink a page earned follows it.
+#
+# The rules are host-agnostic, so any domain attached to this Netlify site
+# (www, the en-GB organisationalamnesia.com, corporateamnesia.com) gets the
+# same page-for-page mapping once it is added as a domain alias.
+#
+# force = true makes the redirects win over the static files still in this
+# repo. Those files are kept as an archive only and are never served.
+
 [build]
   publish = "."
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-
-[[headers]]
-  for = "/styles/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/scripts/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/"
+  to = "https://reattend.com/amnesia"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "https://www.organizationalamnesia.com/*"
-  to = "https://organizationalamnesia.com/:splat"
+  from = "/index.html"
+  to = "https://reattend.com/amnesia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/quiz.html"
+  to = "https://reattend.com/amnesia/quiz"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cost.html"
+  to = "https://reattend.com/amnesia/cost"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/signs.html"
+  to = "https://reattend.com/amnesia/signs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ai-memory.html"
+  to = "https://reattend.com/amnesia/ai-memory"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/attrition.html"
+  to = "https://reattend.com/amnesia/attrition"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/prevent.html"
+  to = "https://reattend.com/amnesia/prevent"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tacit-knowledge.html"
+  to = "https://reattend.com/amnesia/tacit-knowledge"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/research.html"
+  to = "https://reattend.com/amnesia/research"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources.html"
+  to = "https://reattend.com/amnesia/resources"
+  status = 301
+  force = true
+
+# The old "lab" page became an honest About page.
+[[redirects]]
+  from = "/team.html"
+  to = "https://reattend.com/amnesia/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "https://reattend.com/sitemap.xml"
+  status = 301
+  force = true
+
+# Everything else, including the old llms.txt, lands on the section home.
+[[redirects]]
+  from = "/*"
+  to = "https://reattend.com/amnesia"
   status = 301
   force = true
